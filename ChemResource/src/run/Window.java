@@ -1,7 +1,6 @@
 package run;
 
 import java.awt.Color;
-import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import javax.swing.JFrame;
@@ -15,6 +14,7 @@ public class Window extends JFrame{
 	public static final Color BACKGROUND_COLOR = Color.BLACK;
 	public static final Color FOREGROUND_COLOR = Color.WHITE;
 	public static FlowLayout layout;
+	public static ChemPanel chemPanel;
 	public static boolean isRunning = false;
 	
 	public Window() {
@@ -33,7 +33,7 @@ public class Window extends JFrame{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		getContentPane().setBackground(BACKGROUND_COLOR);
 		setForeground(FOREGROUND_COLOR);
-		
+		add(chemPanel = new ChemPanel());
 		setVisible(true);
 		
 		//pack();
