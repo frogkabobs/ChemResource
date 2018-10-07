@@ -1,6 +1,7 @@
 package chemical;
 
 import java.util.ArrayList;
+import chemical.Moiety.Element;
 
 public class Reaction {
 	public Compound[] reactants;
@@ -13,7 +14,7 @@ public class Reaction {
 		conditions = s;
 	}
 	
-	public static final Reaction PUMMERER_REARRANGEMENT = new Reaction(new Compound[] {new Compound(new Atom[] {new Atom(Atom.Element.moiety), new Atom(Atom.Element.sulfur), new Atom(Atom.Element.oxygen), new Atom(Atom.Element.carbon), new Atom(Atom.Element.hydrogen), new Atom(Atom.Element.hydrogen), new Atom(Atom.Element.moiety)}, 
+	public static final Reaction PUMMERER_REARRANGEMENT = new Reaction(new Compound[] {new Compound(new Atom[] {new Atom(Element.organicGroup), new Atom(Element.sulfur), new Atom(Element.oxygen), new Atom(Element.carbon), new Atom(Element.hydrogen), new Atom(Element.hydrogen), new Atom(Element.organicGroup)}, 
 			null, false)}, null, "");
 
 }
